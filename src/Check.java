@@ -25,6 +25,7 @@ public class Check {
             StringBuilder commandOutput = new StringBuilder();  //build up the output from cmd
             while ((currentLine = reader.readLine()) != null) {
                 commandOutput.append(currentLine);
+                commandOutput.append("\n");
             }
 
             int returnCode = process.waitFor();
