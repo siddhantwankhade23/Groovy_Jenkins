@@ -1,1 +1,3 @@
-print( "Java Version  :- "+ System.getProperty("java.version"))
+print("Java Version  :- " + System.getProperty("java.version"))
+String environmentPath = Environment.GetEnvironmentVariable("JAVA_HOME");
+print("Path :-" + environmentPath);
