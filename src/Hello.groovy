@@ -32,8 +32,6 @@ stage("Checking Java Installations"){
     String currentLine = null;  //store current line of output from the cmd
     StringBuilder commandOutput = new StringBuilder();  //build up the output from cmd
 
-    print("is it null : -"+(currentLine = reader.readLine()) != null);
-
     while ((currentLine = reader.readLine()) != null) {
         print("current line : "+currentLine + "\n")
         commandOutput.append(currentLine);
