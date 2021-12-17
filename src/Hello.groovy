@@ -27,21 +27,7 @@ stage("Checking Java Installations"){
     streamReader = new InputStreamReader(stream);
     reader = new BufferedReader(streamReader);
 
-//    print("reader line : "+reader.readLine() + "\n")
+    List<String> lines = reader.readLines();
 
-    String currentLine = null;  //store current line of output from the cmd
-    StringBuilder commandOutput = new StringBuilder();  //build up the output from cmd
-
-    while ((currentLine = reader.readLine()) != null) {
-        print("current line : "+currentLine + "\n")
-        commandOutput.append(currentLine);
-        commandOutput.append("\n");
-    }
-
-    int returnCode = process.waitFor();
-    if (returnCode == 0) {
-        output = commandOutput.toString();
-    }
-
-    print("output : = "+output)
+    print("output : = "+lines.toString())
 }
