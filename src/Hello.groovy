@@ -31,3 +31,20 @@ stage("Checking Java Installations"){
 
     print("output : = "+lines.toString())
 }
+
+stage ("first") {
+    tools {
+        jdk "jdk-1.8.101"
+    }
+    steps {
+        sh 'java -version'
+    }
+}
+stage("second"){
+    tools {
+        jdk "jdk-1.8.152"
+    }
+    steps{
+        sh 'java -version'
+    }
+}
